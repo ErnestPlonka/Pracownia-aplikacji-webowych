@@ -1,0 +1,68 @@
+$accent: #6366f1;
+$text-main: #1e293b;
+$bg-muted: #f8fafc;
+$text-secondary: #64748b;
+
+.CommentsContainer {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f1f5f9;
+
+  .SectionTitle {
+    font-size: 1.25rem;
+    color: $text-main;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+}
+
+.SingleComment {
+  background-color: $bg-muted;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-left-color: $accent;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .CommentMeta {
+    margin-bottom: 0.75rem;
+
+    .CommenterName {
+      margin: 0;
+      font-size: 0.95rem;
+      color: $text-main;
+      text-transform: capitalize;
+    }
+
+    .CommenterEmail {
+      font-size: 0.8rem;
+      color: $accent;
+      font-weight: 500;
+    }
+  }
+
+  .CommentContent {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+}
+
+.InfoMsg, .ErrorMsg, .EmptyState {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  color: $text-secondary;
+}
+
+.ErrorMsg {
+  color: #ef4444;
+  background: #fef2f2;
+  border-radius: 8px;
+}

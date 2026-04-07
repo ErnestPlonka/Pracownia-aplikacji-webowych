@@ -1,0 +1,60 @@
+$accent: #6366f1;
+$text: #1e293b;
+$bg: #f8fafc;
+$card-white: #ffffff;
+
+.DetailsWrapper {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.ContentCard {
+  background-color: $card-white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  border: 1px solid rgba($accent, 0.05);
+
+  .ArticleHeader {
+    margin-bottom: 2rem;
+
+    .PostIndex {
+      display: inline-block;
+      color: $accent;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .MainTitle {
+      margin: 0;
+      color: $text;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+  }
+
+  .ArticleBody {
+    p {
+      font-size: 1.1rem;
+      color: #475569;
+      line-height: 1.8;
+      margin: 0;
+    }
+  }
+}
+
+.StatusMessage, .ErrorMessage {
+  text-align: center;
+  padding: 4rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.ErrorMessage {
+  color: #ef4444;
+}

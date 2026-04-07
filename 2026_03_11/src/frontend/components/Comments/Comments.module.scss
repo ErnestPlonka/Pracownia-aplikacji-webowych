@@ -1,0 +1,153 @@
+$accent: #6366f1;
+$text-main: #1e293b;
+$bg-muted: #f8fafc;
+$text-secondary: #64748b;
+$error-bg: #fef2f2;
+$error-text: #ef4444;
+
+.CommentList {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f1f5f9;
+
+  div {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    color: $text-secondary;
+  }
+
+  .CommentListError {
+    color: $error-text;
+    background: $error-bg;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+}
+
+.CommentListForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: $bg-muted;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: $text-main;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $accent;
+      background-color: #fff;
+      box-shadow: 0 0 0 3px rgba($accent, 0.1);
+    }
+
+    &::placeholder {
+      color: $text-secondary;
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: $accent;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: darken($accent, 10%);
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      background-color: #cbd5e1;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+}
+
+.CommentListHeading {
+  font-size: 2rem;
+  color: $accent;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.CommentListComment {
+  background-color: $bg-muted;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  text-align: left;
+
+  &:hover {
+    border-left-color: $accent;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .CommentListCommentName {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+    color: $text-main;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .CommentListCommentUser {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.8rem;
+    color: $accent;
+    font-weight: 500;
+    text-transform: lowercase;
+  }
+
+  .CommentListCommentBody {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+}
+
+.FadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
