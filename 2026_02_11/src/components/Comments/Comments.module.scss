@@ -1,0 +1,87 @@
+$accent: #6366f1;
+$text-main: #1e293b;
+$bg-muted: #f8fafc;
+$text-secondary: #64748b;
+$error-bg: #fef2f2;
+$error-text: #ef4444;
+
+.CommentList {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f1f5f9;
+
+  div {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    color: $text-secondary;
+  }
+
+  .CommentListError {
+    color: $error-text;
+    background: $error-bg;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+}
+
+.CommentListHeading {
+  font-size: 2rem;
+  color: $accent;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.CommentListComment {
+  background-color: $bg-muted;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  text-align: left;
+
+  &:hover {
+    border-left-color: $accent;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .CommentListCommentName {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+    color: $text-main;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .CommentListCommentUser {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.8rem;
+    color: $accent;
+    font-weight: 500;
+    text-transform: lowercase;
+  }
+
+  .CommentListCommentBody {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+}
+
+.FadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
