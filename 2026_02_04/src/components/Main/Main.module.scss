@@ -1,0 +1,40 @@
+$accent: #14b8a6;
+$dark: #0f172a;
+
+.Main {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  h1 {
+    color: $dark;
+    border-left: 6px solid $accent;
+    padding-left: 1rem;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #334155;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+
+    li {
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      background: #f1f5f9;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: lighten($accent, 40%);
+      }
+    }
+  }
+}
